@@ -1,0 +1,309 @@
+/* Основные стили */
+body {
+    font-family: 'Play', sans-serif; /* Используем шрифт Play */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Белый фон */
+    color: #000000; /* Черный текст */
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Шапка */
+header {
+    background-color: transparent; /* Прозрачный черный фон */
+    color: #000000; /* Белый текст */
+    padding: 30px 0; /* Отступы */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Заголовок */
+header h1 {
+    font-size: 3rem; /* Размер заголовка */
+    margin: 0;
+    font-weight: 700; /* Жирный шрифт */
+    letter-spacing: 2px; /* Увеличиваем расстояние между буквами */
+    text-transform: uppercase; /* Все буквы заглавные */
+    animation: fadeIn 1s ease-out; /* Анимация появления */
+}
+
+
+header h1 {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Тень для текста */
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Навигация */
+nav {
+    background: #000000; /* Черный фон */
+    padding: 20px 0;
+    text-align: center;
+    position: sticky; /* Липкая навигация */
+    top: 0; /* Прилипает к верхней части экрана */
+    z-index: 1000; /* Убедимся, что навигация поверх других элементов */
+}
+
+main {
+    padding-top: 80px; /* Отступ для фиксированной навигации */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase; /* Все буквы заглавные */
+    font-size: 1.2rem; /* Новый размер шрифта */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF5500; /* Оранжевый при наведении */
+}
+
+/* Основной контент */
+/* Контейнер для блока "О себе" */
+.about-container {
+    display: flex; /* Используем Flexbox */
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+    gap: 40px; /* Расстояние между фото и текстом */
+    background: #ffffff; /* Белый фон */
+    padding: 30px; /* Внутренние отступы */
+    border-radius: 15px; /* Закругленные углы */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+/* Фото в блоке "О себе" */
+.about-image {
+    width: 300px; /* Ширина фото */
+    height: auto; /* Сохраняем пропорции */
+    border-radius: 15px; /* Закругленные края */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень */
+    flex-shrink: 0; /* Запрещаем сжатие фото */
+}
+
+/* Текст в блоке "О себе" */
+.about-text {
+    flex: 1; /* Текст занимает оставшееся пространство */
+}
+
+.about-text p {
+    font-size: 1.4rem; /* Увеличиваем размер текста */
+    line-height: 1.8; /* Увеличиваем межстрочный интервал */
+    color: #333; /* Цвет текста */
+    margin: 0; /* Убираем отступы */
+}
+main {
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Центрируем текст */
+}
+
+h2 {
+    font-size: 3rem;
+    color: #000000;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Все буквы заглавные */
+}
+
+/* Анимации */
+.animated-image {
+    animation: float 3s ease-in-out infinite;
+    display: block;
+    margin: 0 auto; /* Центрируем изображение */
+    border-radius: 20px; /* Закругленные края */
+    width: 300px; /* Опционально: задаем ширину */
+    height: auto; /* Сохраняем пропорции */
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+header {
+    animation: fadeIn 1s ease-out;
+}
+
+nav {
+    animation: fadeIn 1.2s ease-out;
+}
+
+.section-content {
+    animation: fadeIn 1.4s ease-out;
+}
+
+footer {
+    animation: fadeIn 1.6s ease-out;
+}
+
+/* Карточки навыков */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center; /* Центрируем карточки */
+}
+
+.skill-card {
+    background: #f4f4f4; /* Светлый фон */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px; /* Ограничиваем ширину карточки */
+    margin: 0 auto; /* Центрируем карточку */
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Портфолио */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center; /* Центрируем карточки */
+}
+
+.portfolio-card {
+    background: #f4f4f4; /* Светлый фон */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px; /* Ограничиваем ширину карточки */
+    margin: 0 auto; /* Центрируем карточку */
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Контакты */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Легкая прозрачность */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Список контактов */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Элемент контакта */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px;
+    background: #f4f4f4; /* Светлый фон */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Иконки контактов */
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+/* Ссылки контактов */
+.contact-item a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+
+#contact ul li a:hover {
+    color: #FF5500; /* Оранжевый при наведении */
+}
+
+/* Подвал */
+footer {
+    background: #000000; /* Черный фон */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('back.jpg'); /* Путь к изображению */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.5; /* Прозрачность фона */
+}
